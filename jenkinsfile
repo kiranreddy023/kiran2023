@@ -15,6 +15,7 @@ pipeline{
                 sh 'rm /opt/tomcat1/webapps/*.war'
                 sh 'cp target/*.war /opt/tomcat1/webapps/'
                 sh '/opt/tomcat1/bin/catalina.sh run'
+		sh 'kill $$'
             }
         }
     }

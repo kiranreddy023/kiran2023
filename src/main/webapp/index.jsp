@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>Hi Kiran, this is Test/QA Branch</h2>
+<h2>Hi Kiran, this is HotFix Branch</h2>
 </body>
 </html>

@@ -1,7 +1,7 @@
 pipeline{
     agent any
     tools{
-        maven 'maven-4.6.3'   
+        maven 'maven-5.6.3'   
     }
 
     stages{
@@ -12,9 +12,9 @@ pipeline{
         }
         stage('deploy'){
             steps{
-                sh 'rm /opt/tomcat4/webapps/*.war'
-                sh 'cp target/*.war /opt/tomcat4/webapps/'
-                sh '/opt/tomcat4/bin/startup.sh'
+                sh 'rm /opt/tomcat5/webapps/*.war'
+                sh 'cp target/*.war /opt/tomcat5/webapps/'
+                sh '/opt/tomcat5/bin/startup.sh'
             }
         }
     }

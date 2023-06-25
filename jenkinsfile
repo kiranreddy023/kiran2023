@@ -1,0 +1,21 @@
+pipeline{
+    agent any
+    tools{
+        maven 'maven-3.6.3'   
+    }
+
+    stages{
+        stage('build'){
+            steps{
+                sh 'mvn clean install'
+            }
+        }
+        stage('deploy'){
+            steps{
+                sh 'rm /opt/tomcat2/webapps/*.war'
+                sh 'cp target/*.war /opt/tomcat2/webapps/'
+                sh '/opt/tomcat2/bin/startup.sh'
+            }
+        }
+    }
+}

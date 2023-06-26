@@ -14,7 +14,7 @@ pipeline{
             steps{
                 sh 'rm /opt/webserver3/webapps/*.war'
                 sh 'cp target/*.war /opt/webserver3/webapps/'
-                sh '/opt/tomcat5/bin/catalina.sh run &'
+                sh '/opt/webserver3/bin/catalina.sh run &'
             }
         }
     }

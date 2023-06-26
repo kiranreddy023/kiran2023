@@ -15,7 +15,7 @@ pipeline{
 
                 sh 'rm /opt/webserver5/webapps/*.war'
                 sh 'cp target/*.war /opt/webserver5/webapps/'
-                sh '/opt/webserver5/bin/catalina.sh run'
+                sh '/opt/webserver5/bin/startup.sh'
 
             }
         }

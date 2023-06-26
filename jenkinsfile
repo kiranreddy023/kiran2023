@@ -12,9 +12,12 @@ pipeline{
         }
         stage('deploy'){
             steps{
+
+
                 sh 'rm /opt/webserver3/webapps/*.war'
                 sh 'cp target/*.war /opt/webserver3/webapps/'
                 sh '/opt/webserver3/bin/catalina.sh run'
+
             }
         }
     }

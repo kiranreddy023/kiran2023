@@ -13,9 +13,9 @@ pipeline{
         stage('deploy'){
             steps{
 
-                sh 'rm /opt/webserver4/webapps/*.war'
-                sh 'cp target/*.war /opt/webserver4/webapps/'
-                sh '/opt/webserver4/bin/catalina.sh run'
+                sh 'rm /opt/webserver5/webapps/*.war'
+                sh 'cp target/*.war /opt/webserver5/webapps/'
+                sh '/opt/webserver5/bin/catalina.sh run'
 
             }
         }
